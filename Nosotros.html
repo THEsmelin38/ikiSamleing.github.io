@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros</title>
+  <link rel="stylesheet" href="Estilo/Genaral.css">
+  <link rel="stylesheet" href="Estilo/Nosotros.css">
+
+  <script src="https://kit.fontawesome.com/your-kit.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div id="header-container"></div>
+
+  <main>
+    
+
+  <main>
+    <section class="encabezado">
+      <img src="Img_General/Plana_Docencia.jpg" alt="Plana docente del Colegio Ikigai">
+      <h1>CONOCE NUESTRA INSTITUCIÓN</h1>
+    </section>
+
+    <section class="presentacion">
+      <div class="texto">
+        <h3>NOSOTROS</h3>
+        <p><strong>Somos la institución educativa "IKIGAI"</strong>, que nace ante la búsqueda de aportar y crecer de la mano de nuestra sociedad. Tenemos un enfoque en formación con valores sólidos que encaminan a nuestros estudiantes a ser hombres de bien, basados en la filosofía PROPÓSITO DE VIDA, que guía a todos los miembros de nuestra comunidad educativa a encontrar las razones por las que debemos conducirnos en el camino del bien y la integridad permanente.
+        
+        Comprometidos con la educación de nuestros estudiantes a través de bases académicas sólidas que les permitan tener competitividad y autoexigencia, y en consonancia con las enseñanzas doctrinales de la fe católica.
+        </p>
+        <div class="ikigai-container">
+          <img class="ikigai" src="../Img_General/logo_ikigai.png" alt="Logo Ikigai">
+        </div>
+      </div>
+
+      <div class="texto">
+        <h3>HISTORIA</h3>
+        <p>La semilla que inició el proyecto IKIGAI nace el 21 de noviembre de 2024, a través de la idea de sumar en nuestra sociedad de la fundadora Aida Diana Baltazar Ramos, quien, tras algunos años en la enseñanza, se percata que los niños necesitaban de una formación que los conduzca en la vida, y los lleve a afrontar de manera positiva las dificultades que se presentaban en todas las etapas de la vida.</p>
+        
+        <p>Fue entonces que la semilla empezó a germinar e inicia el gran reto de sentar bases físicas para brindarles los espacios idóneos donde los estudiantes encontrarán su segunda casa. Durante los meses del año 2024, a partir de febrero, se inicia la construcción del primer pabellón, y se va así estableciendo nuevos acuerdos como alianzas, a través de la unión, como cofundadora, de Janet Raquel Baltazar, y así se empieza a forjar la Institución Educativa IKIGAI, propósito de vida, que pone en marcha sus actividades en el año 2025.</p>
+        
+        <p>Brindando a los padres, quienes son los socios fundamentales para garantizar la formación de los estudiantes en valores y en conocimientos sólidos, la confianza que necesitan en una institución educativa de garantía y de excelentes procesos formativos, que conducirán a sus hijos por el camino del bien y del conocimiento.</p>
+      </div>
+    </section>
+
+    <section class="valores">
+      <div class="caja mision">
+        <h2>Misión</h2>
+        <p>Formar a nuestros estudiantes en un proyecto de vida con valores y conocimientos, que les permita afrontar dificultades y permanecer siempre en el camino del bien.</p>
+      </div>
+      
+      <div class="caja vision">
+        <h2>Visión</h2>
+        <p>Ser una institución educativa reconocida por colaborar con las familias en la educación de sus hijos, formándose como hombres íntegros, coherentes y resilientes, que aporten a la sociedad a través de un proyecto de vida que vaya de la mano con los conocimientos y la fe católica.</p>
+      </div>
+    </section>
+
+  <section class="organigrama-container">
+            <div class="organigrama-content">
+                <h3>ORGANIGRAMA INSTITUCIONAL</h3>
+                  <p>Conoce la estructura organizativa que hace posible nuestra labor educativa y garantiza la excelencia académica en el Colegio Ikigai.</p>
+                <div class="organigrama-img-container">
+                    <img class="organigrama-img" src="../Img_General/Organigrama I.E.P IKIGAI.pdf.png" alt="Organigrama Ikigai">
+                </div>
+            </div>
+        </section>
+
+
+
+    <aside>
+      <section class="descarga-seccion">
+        <h2>Descarga nuestro reglamento interno</h2>
+        <a class="boton-descargar" href="Agenda IkiGai 2025 Armado para prueba (1) (1).pdf" download>Descargar PDF</a>
+      </section>
+    </aside>
+  </main>
+
+
+  
+
+
+
+
+
+
+
+    <div id="footer-container"></div>
+
+  </main>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-container").innerHTML = data;
+      });
+
+    fetch("Footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-container").innerHTML = data;
+      });
+
+  </script>
+</body>
+
+</html>

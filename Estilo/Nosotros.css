@@ -1,0 +1,413 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fafbfc;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+  }
+
+  /* ---------- ENCABEZADO ---------- */
+  .encabezado {
+      position: relative;
+      height: 80vh;
+      overflow: hidden;
+  }
+
+  .encabezado img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.9);
+  }
+
+  .encabezado h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 4rem;
+      text-align: center;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      padding: 0 20px;
+      z-index: 2;
+  }
+
+  /* ---------- PRESENTACIÓN ---------- */
+  .presentacion {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+  }
+
+  .texto {
+      background: white;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      position: relative;
+      overflow: hidden;
+  }
+
+  .texto::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 8px;
+      height: 100%;
+      background: linear-gradient(to bottom, #ffd700, #ffb700);
+  }
+
+  .texto h3 {
+      font-size: 2.2rem;
+      color: #0d4a9e;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 3px solid #ffd700;
+      display: inline-block;
+  }
+
+  .texto p {
+      font-size: 1.1rem;
+      text-align: justify;
+      margin-bottom: 20px;
+      color: #000000;
+      line-height: 1.8;
+  }
+
+  .texto strong {
+      color: #0d4a9e;
+      font-weight: 600;
+  }
+
+  .ikigai-container {
+      text-align: center;
+      margin-top: 30px;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 10px;
+      border-left: 4px solid #ffd700;
+  }
+
+  .ikigai {
+      width: 400px;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+      transition: transform 0.5s ease;
+  }
+
+  .ikigai:hover {
+      transform: scale(1.05);
+  }
+
+  /* ---------- VALORES (MISIÓN Y VISIÓN) ---------- */
+  .valores {
+      max-width: 1200px;
+      margin: 0 auto 60px;
+      padding: 0 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+  }
+
+  .caja {
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s ease;
+      background: white;
+  }
+
+  .caja:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  }
+
+  .caja::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 8px;
+  }
+
+  .mision::after {
+      background: linear-gradient(to right, #ffd700, #ffb700);
+  }
+
+  .vision::after {
+      background: linear-gradient(to right, #1a6dcc, #0d4a9e);
+  }
+
+  .caja h2 {
+      color: #0d4a9e;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #ffd700;
+      display: inline-block;
+  }
+
+  .caja p {
+      font-size: 1.1rem;
+      text-align: justify;
+      color: #020202;
+      line-height: 1.8;
+  }
+
+  /* ---------- ORGANIGRAMA ---------- */
+  .organigrama-container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+  }
+
+  .organigrama-content {
+      background: white;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.37);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+  }
+
+  .organigrama-content::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 8px;
+      height: 100%;
+      background: linear-gradient(to bottom, #9C27B0, #7B1FA2);
+  }
+
+  .organigrama-content h3 {
+      font-size: 2.2rem;
+      color: #0d4a9e;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 3px solid #ffd700;
+      display: inline-block;
+      text-align: center;
+  }
+
+  .organigrama-content p {
+      font-size: 1.1rem;
+      text-align: center;
+      margin: 0 auto 30px;
+      color: #444;
+      line-height: 1.8;
+      max-width: 800px;
+  }
+
+  .organigrama-img-container {
+      padding: 20px;
+      background: #ece9ec;
+      border-radius: 10px;
+      border-left: 4px solid #851c979a;
+      overflow: hidden;
+  }
+
+  .organigrama-img {
+      max-width: 70%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      transition: transform 0.2s ease;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .organigrama-img:hover {
+      transform: scale(1.02);
+  }
+
+  /* ---------- DESCARGA ---------- */
+  .descarga-seccion {
+      max-width: 1200px;
+      margin: 0 auto 80px;
+      padding: 40px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #1a6dcc 0%, #0d4a9e 100%);
+      border-radius: 15px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+  }
+
+  .descarga-seccion::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      width: 150px;
+      height: 150px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+  }
+
+  .descarga-seccion::after {
+      content: "";
+      position: absolute;
+      bottom: -70px;
+      right: -70px;
+      width: 200px;
+      height: 200px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+  }
+
+  .descarga-seccion h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 2;
+  }
+
+  .boton-descargar {
+      display: inline-block;
+      background: #ffd700;
+      color: #0d4a9e;
+      padding: 15px 40px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.4s ease;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      border: none;
+      cursor: pointer;
+  }
+
+  .boton-descargar:hover {
+      background: #ffdf33;
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 992px) {
+      .encabezado h1 {
+          font-size: 3rem;
+      }
+
+      .texto {
+          padding: 30px;
+      }
+
+      .caja {
+          padding: 30px;
+      }
+  }
+
+  @media (max-width: 768px) {
+      .encabezado {
+          height: 50vh;
+      }
+
+      .encabezado h1 {
+          font-size: 2.5rem;
+      }
+
+      .presentacion {
+          margin: 40px auto;
+          gap: 30px;
+      }
+
+      .texto {
+          padding: 25px 20px;
+      }
+
+      .texto h3 {
+          font-size: 1.8rem;
+      }
+
+      .caja {
+          padding: 25px 20px;
+      }
+
+      .caja h2 {
+          font-size: 1.6rem;
+      }
+
+      .descarga-seccion h2 {
+          font-size: 1.7rem;
+      }
+
+      .organigrama-content {
+          padding: 30px;
+      }
+
+      .organigrama-content h3 {
+          font-size: 1.8rem;
+      }
+
+      .organigrama-img-container {
+          padding: 15px;
+      }
+  }
+
+  @media (max-width: 480px) {
+      .encabezado {
+          height: 40vh;
+      }
+
+      .encabezado h1 {
+          font-size: 2rem;
+      }
+
+      .texto h3 {
+          font-size: 1.6rem;
+      }
+
+      .caja h2 {
+          font-size: 1.4rem;
+      }
+
+      .descarga-seccion h2 {
+          font-size: 1.5rem;
+      }
+
+      .boton-descargar {
+          padding: 12px 30px;
+          font-size: 1rem;
+      }
+
+      .organigrama-content {
+          padding: 20px;
+      }
+
+      .organigrama-content h3 {
+          font-size: 1.6rem;
+      }
+
+      .organigrama-content p {
+          font-size: 1rem;
+      }
+
+      .organigrama-img {
+          width: 100%;
+      }
+  }

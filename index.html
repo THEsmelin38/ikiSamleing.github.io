@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- CSS y FontAwesome -->
+    <link rel="icon" href="Img_General/solo_logo.png" type="image/png" />
+
+    <link rel="stylesheet" href="Estilo/Genaral.css">
+    <link rel="stylesheet" href="Estilo/Inicio.css">
+    <script src="https://kit.fontawesome.com/your-kit.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div id="header-container"></div>
+
+    <main>
+
+        <main id="main">
+
+            <div class="parte-1">
+                <!--<h2>Bienvenidos al colegio Ikigai </h2>
+                -->
+
+
+                <img src="Img_General/img_principal.jpg" alt="parte-principal">
+
+            </div>
+
+
+            <div class="parte-2">
+                <div>
+                    <h2>Diponemos de 2 niveles educativos </h2>
+                </div>
+
+                <div class="texto">
+                    <p>Una educación de calidad para la formación de la persona en
+                        todos los campos del conocimiento,
+                        basada en una preparación humanista,
+                        cientifica y artistica.</p>
+                </div>
+
+
+                <div class="niveles">
+                    <div class="inicial">
+                        <img src="Img_General/nivel_inicial.jpg" alt="Inicial" width="200" height="200">
+                        <div class="tarjeta-texto">INICIAL</div>
+                    </div>
+
+                    <div class="primaria">
+                        <img src="Img_General/nivel_primaria.jpg" alt="Primaria" width="200" height="200">
+                        <div class="tarjeta-texto">PRIMARIA</div>
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+
+            <div class="parte-3">
+
+                <section class="seccion-educativa">
+                    <div class="imagenes">
+                        <img src="Img_General/IMAGENINICIAL PG.jpg " alt="Niños jugando">
+                        <img src="Img_General/IMAGEN PRIMARIA.jpg" alt="Docente y niña">
+                    </div>
+
+                    <div class="contenido">
+                        <h2>Nuestra Propuesta Educativa</h2>
+                        <ul>
+                            <li>Enfoque educativo humanista – científico.</li>
+                            <li>Currículo por competencias.</li>
+                            <li>Desarrollo de habilidades blandas.</li>
+                            <li>Talleres psicopedagógicos y artísticos.</li>
+                            <li>Actividades culturales y de integración.</li>
+                            <li>Docentes con experiencia pedagógica.</li>
+                            <li>Asesorías psicopedagógicas.</li>
+                            <li>Sistema de retroalimentación y seguimiento.</li>
+                            <li>Tutoría y acompañamiento personalizado.</li>
+                        </ul>
+                    </div>
+                </section>
+
+
+
+            </div>
+
+        </main>
+
+
+
+
+        <div>
+            
+
+
+
+
+            </aside>
+        </div>
+
+        <!-- Botón flotante mejorado -->
+        <a class="whatsapp-button"
+            href="https://web.whatsapp.com/send?phone=51997934286&text=Hola, quisiera recibir más información sobre el código, por favor. ."
+            target="_blank" aria-label="Chat con WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+       
+
+
+
+    </main>
+ <div id="footer-container"></div>
+
+
+
+    <script>
+        // Menú responsivo
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menuToggle');
+            const menuNavegacion = document.getElementById('menuNavegacion');
+
+            menuToggle.addEventListener('click', function () {
+                menuNavegacion.classList.toggle('active');
+            });
+
+            // Cerrar menú al hacer clic en un enlace
+            const menuLinks = document.querySelectorAll('.menu-navegacion a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuNavegacion.classList.remove('active');
+                });
+            });
+        });
+
+
+
+
+        fetch("header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header-container").innerHTML = data;
+            });
+
+
+
+
+        fetch("Footer.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("footer-container").innerHTML = data;
+            });
+
+        // Animación adicional para el botón
+        document.addEventListener('DOMContentLoaded', function () {
+            const whatsappButton = document.querySelector('.whatsapp-button');
+
+            // Agregar efecto al cargar la página
+            setTimeout(() => {
+                whatsappButton.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    whatsappButton.style.transform = 'scale(1)';
+                }, 300);
+            }, 1000);
+        });
+    </script>
+
+
+</body>
+
+</html>

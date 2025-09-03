@@ -1,0 +1,310 @@
+/* RESET BÁSICO */
+:root {
+  --azul-claro: #1a6dcc;
+  --azul-oscuro: #0d4a9e;
+  --amarillo-dorado: #FFD700;
+  --amarillo-claro: #fff4b1;
+  --blanco: #ffffff;
+  --texto-azul: #0a2458;
+  --hover-celeste: #0db9d3;
+}
+
+
+
+/* ---------- CABECERA ---------- */
+#header {
+  background: linear-gradient(135deg, var(--azul-claro) 0%, var(--azul-oscuro) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- LOGO ---------- */
+.logo img {
+  width: 220px;
+  height: auto;
+  border-radius: 6px;
+  filter: drop-shadow(0px 0px 8px #ffffff7c); /* Difuminado blanco */
+}
+
+/* ---------- MENÚ DE NAVEGACIÓN ---------- */
+.menu-navegacion {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 10px;
+  margin-right: 20px;
+}
+
+/* ---------- LISTA ---------- */
+.menu-navegacion ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- ENLACES ---------- */
+.menu-navegacion li a {
+  text-decoration: none;
+  font-size: 1.9rem;
+  font-weight: bold;
+  padding: 10px 18px;
+
+  border-radius: 8px;
+  color: var(--amarillo-dorado);
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.menu-navegacion li a:hover {
+ 
+  color: #fff;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  #header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .menu-navegacion {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+  }
+
+  .menu-navegacion ul {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .menu-navegacion li a {
+    width: 80%;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .logo img {
+    width: 180px;
+    margin-bottom: 15px;
+  }
+}
+
+
+
+
+/* ===== FOOTER GENERAL ===== */
+#footer {
+    background: linear-gradient(135deg, #1a2a6c, #0e7ceb);
+    color: #fff;
+    padding: 50px 20px 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1" cx="50" cy="50" r="40"/></svg>');
+    opacity: 0.15;
+    z-index: -1;
+}
+
+/* ===== CONTENEDOR ===== */
+.footer-contenedor {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* ===== COLUMNAS ===== */
+.footer-columna,
+.footer-columnal {
+    flex: 1 1 300px;
+    min-width: 250px;
+}
+
+.footer-columna h3,
+.footer-columnal h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-columna h3::after,
+.footer-columnal h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+}
+
+.footer-columna h3 img {
+    margin-right: 10px;
+    border-radius: 50%;
+    background: white;
+    padding: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer-columna p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #eaeaea;
+    margin: 0;
+}
+
+/* ===== LISTAS ===== */
+.footer-columna ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-columna ul li {
+    margin-bottom: 12px;
+    font-size: 15px;
+    display: flex;
+    align-items: flex-start;
+    color: #f0f0f0;
+}
+
+
+
+/* ===== REDES SOCIALES ===== */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-icons a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    z-index: -1;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+    color: white;
+}
+
+.social-icons a:hover::after {
+    transform: scale(1);
+}
+
+.social-icons a:hover:nth-child(1) {
+    color: #1877f2;
+}
+.social-icons a:hover:nth-child(2) {
+    color: #000000;
+}
+.social-icons a:hover:nth-child(3) {
+    color: #e4405f;
+}
+.social-icons a:hover:nth-child(4) {
+    color: #ff0000;
+}
+
+.social-icons a:hover i {
+    animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* ===== COPYRIGHT (si lo agregas luego) ===== */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #ccc;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .footer-columna,
+    .footer-columnal {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-columna,
+    .footer-columnal {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .footer-columna h3,
+    .footer-columnal h3 {
+        justify-content: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-columna ul li {
+        justify-content: center;
+    }
+}
